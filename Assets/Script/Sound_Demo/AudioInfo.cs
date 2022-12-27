@@ -2,32 +2,33 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+//ä»£ç æ‹‰æ›´æ”¹
 
 public class Audioinfo
 {
-    public int id;//id  keyÖµ
-    public float audioNum;//ÒôÁ¿´óĞ¡
-    public string IsSilence;//ÊÇ·ñ¾²Òô
+    public int id;//id  keyå€¼
+    public float audioNum;//éŸ³é‡å¤§å°
+    public string IsSilence;//æ˜¯å¦é™éŸ³
 }
 
 public class AudioInfo : MonoBehaviour
 {
-    public static AudioInfo AudioInfoInstance;//µ¥Àı
-    //ÒôÁ¿Ñ¡ÏîÅäÖÃ±í
+    public static AudioInfo AudioInfoInstance;//å•ä¾‹
+    //éŸ³é‡é€‰é¡¹é…ç½®è¡¨
     private TextAsset AudioAsset;
-    //ÉùÃ÷×Öµä
+    //å£°æ˜å­—å…¸
     private Dictionary<int, Audioinfo> AudioInfoDic = new Dictionary<int, Audioinfo>();
     void Awake()
     {
-        AudioAsset = Resources.Load<TextAsset>("TextInfo/AudioInfo");//¼ÓÔØÅäÖÃ±í
+        AudioAsset = Resources.Load<TextAsset>("TextInfo/AudioInfo");//åŠ è½½é…ç½®è¡¨
         AudioInfoInstance = this;
         ReadInfo();
     }
 
     void ReadInfo()
     {
-        string[] strArray = AudioAsset.text.Split('\n');//µÃµ½Ã¿Ò»ĞĞ
-        foreach(string str in strArray)//·Ö¸îÃ¿Ò»ĞĞ
+        string[] strArray = AudioAsset.text.Split('\n');//å¾—åˆ°æ¯ä¸€è¡Œ
+        foreach(string str in strArray)//åˆ†å‰²æ¯ä¸€è¡Œ
         {
             string[] arrayPro = str.Split(',');
             Audioinfo info = new Audioinfo();
@@ -39,7 +40,7 @@ public class AudioInfo : MonoBehaviour
     }
 
     /// <summary>
-    /// Ìá¹©¸øÍâ²¿µÄ½Ó¿ÚÓÃÓÚÍ¨¹ıid·µ»Ø¶ÔÏó
+    /// æä¾›ç»™å¤–éƒ¨çš„æ¥å£ç”¨äºé€šè¿‡idè¿”å›å¯¹è±¡
     /// </summary>
     /// <returns></returns>
     public Audioinfo GetAudioinfoById(int id)
