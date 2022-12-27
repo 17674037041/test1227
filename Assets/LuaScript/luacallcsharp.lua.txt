@@ -1,0 +1,11 @@
+
+print("hotfix")
+xlua.hotfix(CS.luacallcsharp,'OnClickBtn1',function(self)
+	CS.UnityEngine.Object.Destroy(self.cube.gameObject)
+	print("°´Å¥1")
+end)
+
+xlua.hotfix(CS.luacallcsharp,'OnClickBtn2',function(self)
+	CS.UnityEngine.Object.Destroy(self.sphere.gameObject)
+	print("°´Å¥2")
+end)

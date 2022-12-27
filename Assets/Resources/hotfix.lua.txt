@@ -1,0 +1,64 @@
+print("hello world for lua")
+a=100
+b=100
+c=555555
+str="abc"
+boolean=true
+
+tab={
+	name="张三",
+	age=99,
+	func=function()
+		print('a*b='..a*b)
+	end,
+	func1=function(arg,c,b)
+		print('c*b='..c*b)
+	end,
+	100,
+	200,
+	300,
+	'dds'
+}
+function tab.func2(tab,a,b)
+	print('a*b='..a*b)
+end
+
+function tab:func3(a,b)
+	print('a*b='..a*b)
+end
+
+--全局函数
+function func4()
+	print("global function")
+end
+
+function func5(a,b)
+	print("a+b="..a+b)
+end
+
+--多个返回值
+function func6(a,b)
+	print("a*b="..a*b)
+	return {num=123,nu="1dsd"},100,"dsd"
+end
+
+--返回一个函数 无参
+func7=function()
+	print("这是func7函数")
+end
+
+func8=function()
+	print("这是func8函数")
+	return func7
+end
+
+--返回一个有参的函数
+func9=function(a,b)
+	print("这是有参的func9函数"..a*b)
+end
+
+func10=function()
+	print("这是func10函数")
+	return "fdf",10,5,4,6
+end
+	
