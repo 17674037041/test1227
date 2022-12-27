@@ -91,6 +91,7 @@
     <Compile Include="Assets\XLua\Gen\UnityEngine_Vector2Wrap.cs" />
     <Compile Include="Assets\Script\Grid_Demo\RandomNum.cs" />
     <Compile Include="Assets\XLua\Examples\08_Hotfix\HotfixTest2.cs" />
+    <Compile Include="Assets\Script\loadlua.cs" />
     <Compile Include="Assets\XLua\Src\ObjectPool.cs" />
     <Compile Include="Assets\XLua\Gen\XLuaTest_InvokeLua_ICalcBridge.cs" />
     <Compile Include="Assets\XLua\Gen\UnityEngine_TransformWrap.cs" />
@@ -159,7 +160,6 @@
     <Compile Include="Assets\XLua\Gen\XLuaTest_PeddingWrap.cs" />
     <Compile Include="Assets\XLua\Gen\System_Collections_Generic_List_1_System_Int32_Wrap.cs" />
     <Compile Include="Assets\XLua\Gen\Tutorial_DerivedClassExtensionsWrap.cs" />
-    <Compile Include="Assets\Script\loadlua.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\XLua\Examples\07_AsyncTest\Resources\async_test.lua.txt" />
